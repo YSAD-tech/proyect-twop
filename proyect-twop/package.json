@@ -1,0 +1,19 @@
+{
+  "name": "proyect-twop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YSAD-tech/proyect-twop.git"
+  },
+  "author": "Ys",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YSAD-tech/proyect-twop/issues"
+  },
+  "homepage": "https://github.com/YSAD-tech/proyect-twop#readme",
+  "description": ""
+}
