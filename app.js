@@ -1,17 +1,21 @@
-const express = require('express')
-const mongoose = require('mongoose')
-import articulos from './routers/articulosRoutes';
-import categorias from './routers/categoriasRoutes';
-import terceros from './routers/tercerosRoutes';
-import movimientos from './routers/movimientosRoutes';
-require('dotenv').config()
+import express from 'express';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv'
+import articulosRoutes from './routers/articulosRoutes.js';
+import categoriasRoutes from './routers/categoriasRoutes.js';
+import tercerosRoutes from './routers/tercerosRoutes.js';
+import movimientosRoutes from './routers/movimientosRoutes.js';
+
+dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use("/api/articulos", articulos)
-app.use("/api/categorias", categorias)
-app.use("/api/terceros", terceros)
-app.use("/api/movimientos", movimientos)
+
+// Rutas
+app.use("/api/articulos", articulosRoutes);
+app.use("/api/categorias", categoriasRoutes);
+app.use("/api/terceros", tercerosRoutes);
+app.use("/api/movimientos", movimientosRoutes);
 
 app.listen(process.env.PORT,()=>{
   console.log('Servidor escuchando en el puerto' + process.env.PORT);
