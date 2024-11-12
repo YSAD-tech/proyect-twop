@@ -18,7 +18,7 @@ app.use("/api/terceros", tercerosRoutes);
 app.use("/api/movimientos", movimientosRoutes);
 
 app.listen(process.env.PORT,()=>{
-  console.log('Servidor escuchando en el puerto' + process.env.PORT);
+  console.log('Servidor escuchando en el puerto ' + process.env.PORT);
   mongoose.connect(process.env.CNX_MONGO)
   .then(()=> console.log('conected!'))
   .catch((error)=> console.log(error))
